@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <section class="main-container">
+    <div class="calname"><h2>My Favourite Calculator</h2></div>
+    <div class="container">
+      <div id="display" >
+        <p></p>
+      </div>
+      <div class="button">
+         <div class="btn1">
+        <p>
+          <button onclick = "addToCalculation('1')">1</button>
+          <button onclick = "addToCalculation('2')">2</button>
+          <button onclick = "addToCalculation('3')">3</button>
+          <button onclick = "addToCalculation('+')">+</button>
+        </p>
+      </div>
+      <div class="btn2">
+        <p>
+          <button onclick="addToCalculation('4')">4</button>
+          <button onclick="addToCalculation('5')">5</button>
+          <button onclick="addToCalculation('6')">6</button>
+          <button onclick="addToCalculation('-')">-</button>
+        </p>
+      </div>
+      <div class="btn3">
+        <p>
+          <button onclick="addToCalculation('7')">7</button>
+          <button onclick="addToCalculation('8')">8</button>
+          <button onclick="addToCalculation('9')">9</button>
+          <button onclick="addToCalculation('*')">*</button>
+        </p>
+      </div>
+      <div class="btn4">
+        <p>
+          <button onclick="addToCalculation('0')">0</button>
+          <button onclick="addToCalculation('.')">.</button>
+          <button onclick="calculate('')">=</button>
+          <button onclick="addToCalculation('/')">/</button>
+        </p>
+      </div>
+      <div class="clear">
+        <p><button onclick="clearCalculation('')">Clear</button></p>
+      </div>
+      </div>
+     
+    </div>
+  </section>
+  
+  
+  <script>
+    let calculation = '';
+    function addToCalculation(value){
+      calculation += value;
+      document.getElementById('display').innerText = calculation;
+    }
+  </script>
+  <script>
+    function calculate(value) {
+      try {
+      const result = eval(calculation);
+      calculation = result.toString();
+      document.getElementById('display').innerText = result;
+    } catch (error) {
+      document.getElementById('display').innerText = 'Error';
+      calculation = '';
+    }
+    }
+    </script>
+    <script>
+      function clearCalculation(){
+        calculation = "";
+        document.getElementById('display').innerText= '';
+      }
+    </script>
+ <script>
+ function findFirstX("hellox") {
+  return hellox.indexOf('x');
+  document.getElementById('str');
+}
+</script>
+</body>
+</html>
