@@ -4,13 +4,16 @@
   box-sizing: border-box;
 }
  .main-container{
-  margin-left: 30%;
+  margin-left: 25%;
+  margin-top: 2%;
   box-sizing: border-box;
- 
 }
 .calname{
-  color: rgb(46, 211, 211);
+  color: rgb(5, 46, 46);
   line-height: 50px;
+  font-size:medium;
+  margin-left: 10%;
+  margin-top: 40px;
 }
 #display{
 background-color: rgb(172, 163, 163);
@@ -19,7 +22,7 @@ border-radius: 20px;
 }
 #display{
   background-size:5px;
-  width: 80%;
+  width: 170px;
   height: 30px;
   margin-top: 20px;
   font-size: 25px;
@@ -28,14 +31,14 @@ border-radius: 20px;
 
 .container{
   background-color: rgb(49, 126, 161);
-  width: 25%;
+  width: 20%;
   border-radius: 20px;
   height: 350px;
   padding-left: 30px;
   
 }
 .container{
-  background-size: 20%;
+  background-size: 15%;
 }
 .btn1{
    padding-top: 18px;
@@ -83,4 +86,82 @@ font-size: 25px;
 }
 .buttons{
   margin-right: 5%;
-} \\It controls all the numbers  btn and clear btn
+} /*It controls all the numbers  btn and clear btn*/
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERY - phones*/
+@media screen and (max-width:480px) {
+body{
+  background-color: grey;
+  background-image: radial-gradient(whitesmoke, rgb(44, 42, 42));
+}
+.main-container{
+  margin-left: 8%;
+}
+.container{
+  width: 78%;
+}
+.calname{
+  margin-left: 20px;
+}
+.button{
+  margin-left: 10%;
+}
+.display{
+  margin-left: 10%;
+  width: 190px;
+}
+}
+@media screen and (max-width:250px) {
+body{
+  background-color: grey;
+  background-image: radial-gradient(whitesmoke, rgb(44, 42, 42));
+}
+.main-container{
+  margin-left: 8%;
+}
+.container{
+  width: 78%;
+}
+.calname{
+  margin-left: 20px;
+}
+.button{
+  margin-left: 10%;
+}
+.display{
+  margin-left: 10%;
+  width: 190px;
+}
+}
+
+/* MEDIA QUERY - small tabets*/
+@media screen and (min-width:768px) {
+body{
+  background-color: grey;
+  background-image: radial-gradient(whitesmoke, rgb(44, 42, 42));
+}
+.main-container{
+  margin-left: 30%;
+}
+.container{
+  width: 60%;
+}
+.calname{
+  margin-left: 30%;
+}
+.button{
+  margin-left: 20%;
+}
+#display{
+  margin-left: 6%;
+  width: 250px;
+}
+}
