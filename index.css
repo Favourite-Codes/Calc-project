@@ -1,167 +1,97 @@
-*{
-  margin: 0px;
-  padding: 0px;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
- .main-container{
-  margin-left: 25%;
+
+/* Base Layout */
+body {
+  background-color: grey;
+  background-image: radial-gradient(whitesmoke, rgb(44, 42, 42));
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column; /* stack calname and calculator vertically */
+  align-items: center;    /* center both horizontally */
   margin-top: 2%;
-  box-sizing: border-box;
 }
-.calname{
+
+.calname {
   color: rgb(5, 46, 46);
   line-height: 50px;
-  font-size:medium;
-  margin-left: 10%;
-  margin-top: 40px;
-}
-#display{
-background-color: rgb(172, 163, 163);
-border-radius: 20px;
-
-}
-#display{
-  background-size:5px;
-  width: 170px;
-  height: 30px;
-  margin-top: 20px;
-  font-size: 25px;
+  font-size: larger;
   text-align: center;
+  transition: color 0.5s ease, font-size 0.5s ease, opacity 0.5s ease;
 }
 
-.container{
+
+.container {
   background-color: rgb(49, 126, 161);
-  width: 20%;
   border-radius: 20px;
-  height: 350px;
-  padding-left: 30px;
-  
+  padding: 20px;
+  width: 100%;
+  max-width: 320px; /* responsive max size */
 }
-.container{
-  background-size: 15%;
+
+
+#display {
+  background-color: rgb(172, 163, 163);
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  font-size: 25px;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 15px;
+  overflow-x: auto;
 }
-.btn1{
-   padding-top: 18px;
+
+.button p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
-.btn2{
-   padding-top: 18px;
-}
-.btn3{
-   padding-top: 18px;
-}
-.btn4{
-   padding-top: 18px;
-}
-.btn1 p button{
-   margin-right: 20px;
-  width: 25px;
+
+.button button {
+  flex: 1;
+  margin: 2px;
+  padding: 10px;
+  font-size: 20px;
   border-radius: 5px;
-  font-size: 25px;
-}
-.btn2 p button{
-  margin-right: 20px;
-  width: 25px;
-   border-radius: 5px;
-  font-size: 25px;
-}
-.btn3 p button{
-  margin-right: 20px;
-  width: 25px;
-   border-radius: 5px;
-  font-size: 25px;
-}
-.btn4 p button{
-  margin-right: 20px;
-   width: 25px;
-  border-radius: 5px;
-  font-size: 25px;
-}
-.clear{
-    padding-top: 25px;
-    
-}
-.clear p button{
-font-size: 25px;
- border-radius: 5px;
-}
-.buttons{
-  margin-right: 5%;
-} /*It controls all the numbers  btn and clear btn*/
-
-
-
-
-
-
-
-
-
-/* MEDIA QUERY - phones*/
-@media screen and (max-width:480px) {
-body{
-  background-color: grey;
-  background-image: radial-gradient(whitesmoke, rgb(44, 42, 42));
-}
-.main-container{
-  margin-left: 8%;
-}
-.container{
-  width: 78%;
-}
-.calname{
-  margin-left: 20px;
-}
-.button{
-  margin-left: 10%;
-}
-.display{
-  margin-left: 10%;
-  width: 190px;
-}
-}
-@media screen and (max-width:250px) {
-body{
-  background-color: grey;
-  background-image: radial-gradient(whitesmoke, rgb(44, 42, 42));
-}
-.main-container{
-  margin-left: 8%;
-}
-.container{
-  width: 78%;
-}
-.calname{
-  margin-left: 20px;
-}
-.button{
-  margin-left: 10%;
-}
-.display{
-  margin-left: 10%;
-  width: 190px;
-}
+  border: none;
+  background-color: white;
+  cursor: pointer;
 }
 
-/* MEDIA QUERY - small tabets*/
-@media screen and (min-width:768px) {
-body{
-  background-color: grey;
-  background-image: radial-gradient(whitesmoke, rgb(44, 42, 42));
+.clear button {
+  width: 100%;
+  padding: 12px;
+  font-size: 20px;
 }
-.main-container{
-  margin-left: 30%;
+
+/* Responsive for phones */
+@media (max-width: 480px) {
+  #display {
+    font-size: 20px;
+  }
+  .button button {
+    font-size: 18px;
+    padding: 8px;
+  }
 }
-.container{
-  width: 60%;
-}
-.calname{
-  margin-left: 30%;
-}
-.button{
-  margin-left: 20%;
-}
-#display{
-  margin-left: 6%;
-  width: 250px;
-}
+
+/* Responsive for tablets */
+@media (min-width: 768px) {
+  .container {
+    max-width: 400px;
+  }
+  #display {
+    font-size: 28px;
+  }
 }
