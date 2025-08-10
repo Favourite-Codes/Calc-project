@@ -1,86 +1,97 @@
-*{
-  margin: 0px;
-  padding: 0px;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
- .main-container{
-  margin-left: 30%;
-  box-sizing: border-box;
- 
+
+/* Base Layout */
+body {
+  background-color: grey;
+  background-image: radial-gradient(whitesmoke, rgb(44, 42, 42));
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-.calname{
-  color: rgb(46, 211, 211);
+
+.main-container {
+  display: flex;
+  flex-direction: column; /* stack calname and calculator vertically */
+  align-items: center;    /* center both horizontally */
+  margin-top: 2%;
+}
+
+.calname {
+  color: rgb(5, 46, 46);
   line-height: 50px;
-}
-#display{
-background-color: rgb(172, 163, 163);
-border-radius: 20px;
-
-}
-#display{
-  background-size:5px;
-  width: 80%;
-  height: 30px;
-  margin-top: 20px;
-  font-size: 25px;
+  font-size: larger;
   text-align: center;
+  transition: color 0.5s ease, font-size 0.5s ease, opacity 0.5s ease;
 }
 
-.container{
+
+.container {
   background-color: rgb(49, 126, 161);
-  width: 25%;
   border-radius: 20px;
-  height: 350px;
-  padding-left: 30px;
-  
+  padding: 20px;
+  width: 100%;
+  max-width: 320px; /* responsive max size */
 }
-.container{
-  background-size: 20%;
+
+
+#display {
+  background-color: rgb(172, 163, 163);
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  font-size: 25px;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 15px;
+  overflow-x: auto;
 }
-.btn1{
-   padding-top: 18px;
+
+.button p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
-.btn2{
-   padding-top: 18px;
-}
-.btn3{
-   padding-top: 18px;
-}
-.btn4{
-   padding-top: 18px;
-}
-.btn1 p button{
-   margin-right: 20px;
-  width: 25px;
+
+.button button {
+  flex: 1;
+  margin: 2px;
+  padding: 10px;
+  font-size: 20px;
   border-radius: 5px;
-  font-size: 25px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
 }
-.btn2 p button{
-  margin-right: 20px;
-  width: 25px;
-   border-radius: 5px;
-  font-size: 25px;
+
+.clear button {
+  width: 100%;
+  padding: 12px;
+  font-size: 20px;
 }
-.btn3 p button{
-  margin-right: 20px;
-  width: 25px;
-   border-radius: 5px;
-  font-size: 25px;
+
+/* Responsive for phones */
+@media (max-width: 480px) {
+  #display {
+    font-size: 20px;
+  }
+  .button button {
+    font-size: 18px;
+    padding: 8px;
+  }
 }
-.btn4 p button{
-  margin-right: 20px;
-   width: 25px;
-  border-radius: 5px;
-  font-size: 25px;
+
+/* Responsive for tablets */
+@media (min-width: 768px) {
+  .container {
+    max-width: 400px;
+  }
+  #display {
+    font-size: 28px;
+  }
 }
-.clear{
-    padding-top: 25px;
-    
-}
-.clear p button{
-font-size: 25px;
- border-radius: 5px;
-}
-.buttons{
-  margin-right: 5%;
-} \\It controls all the numbers  btn and clear btn
